@@ -84,12 +84,11 @@ class Admin extends Component {
       <div className="page">
         <h1 className="admin-title">Admin Panel</h1>
         <p>{this.state.status}</p>
-        {!this.state.loggedIn &&
-          this.state.status !== 'Loading...' && (
-            <button className="button button-admin" onClick={this.login}>
-              Authenticate
-            </button>
-          )}
+        {!this.state.loggedIn && this.state.status !== 'Loading...' && (
+          <button className="button button-admin" onClick={this.login}>
+            Authenticate
+          </button>
+        )}
         {this.state.admin && (
           <div>
             <div>
@@ -110,6 +109,12 @@ class Admin extends Component {
                 data-url="/admin/preview"
                 onClick={this.navigate}>
                 Data Preview
+              </button>
+              <button
+                className="button button-admin"
+                data-url="/admin/train"
+                onClick={this.navigate}>
+                Train
               </button>
             </div>
           </div>
