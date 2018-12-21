@@ -16,6 +16,7 @@ import Approval from '../Admin/Approval/Approval';
 import ErrorPage from '../ErrorPage/ErrorPage';
 import Viewer from '../Admin/Preview/Viewer';
 import Collection from '../Admin/Collection/Collection';
+import Train from '../Admin/Train/Train';
 
 import StyledFirebaseAuth from 'react-firebaseui/StyledFirebaseAuth';
 import initFirebase from '../../utils/firebase';
@@ -128,6 +129,7 @@ class App extends Component {
               <Route exact path="/admin/preview" component={Viewer} />
               <Route exact path="/admin/approval" component={Approval} />
               <Route exact path="/admin/collection" component={Collection} />
+              <Route exact path="/admin/train" component={Train} />
               <Route exact path="/error" component={ErrorPage} />
             </Switch>
             {this.state.showTimer && (

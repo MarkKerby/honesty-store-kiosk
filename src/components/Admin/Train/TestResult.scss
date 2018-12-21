@@ -1,0 +1,17 @@
+.test-result {
+    padding: 2px;
+    margin: 5px;
+
+    display: flex;
+    flex-direction: column;
+    align-content: stretch;
+    align-items: center;
+}
+
+.test-result.correct {
+    background-color: green;
+}
+
+.test-result.incorrect {
+    background-color: red;
+}
